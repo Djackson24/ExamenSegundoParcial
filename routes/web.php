@@ -41,7 +41,7 @@ Route::get('/frogs/{id}', function ($id) {
     App\Frog::destroy($id);
     $x = App\Frog::all();
 
-    return 'Frog'.$id.' deleted/n' . $x;
+    return 'Frog'.$id.' deleted' . $x;
 });
 Route::get('/dugongs/{id}', function ($id) {
     App\Dugong::destroy($id);
@@ -73,6 +73,19 @@ Route::get('/octopuses/{id}', function ($id) {
 
     return 'Octopus'.$id.' deleted' . $x;
 });
+
+Route::post('mares/add', function(Request $request){
+    $mares = new Mare();
+    $mares -> nombre = $request->input('nombre');
+    $mares -> color = $request->input('color');
+    $mares -> peso= $request->input('peso');
+    $mares -> longitud = $request->input('longitud');
+    $mares -> edad = $request->input('edad');
+    $mares -> animal_id = $request->input('animal_id');
+});
+
+
+
 
 
 
