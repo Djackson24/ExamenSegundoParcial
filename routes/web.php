@@ -24,10 +24,10 @@ Route::get('/', function () {
 //     return App\Octopus::all();
 // });
 
-Route::get('Antelope/{$id}',function($id){
-
-    $ante = App\Antelope::find($id);
-    return $ante;
+Route::get('/animales',function($id){
+$animales = DB::table('animales')->get();
+$animal = DB::table('especies')->get();
+return $animales . $animal;
 });
 
 
