@@ -17,9 +17,9 @@ class DugongsSeeder extends Seeder
             DB::table('dugongs')->insert(array(
                 'nombre' => $faker->firstNameMale,
                 'color' => str_random(10),
-                'peso' => random_int(15,50),
-                'longitud' => random_int(15,80),
-                'edad'=> random_init(0,20),
+                'peso' => rand(15,50),
+                'longitud' => rand(15,80),
+                'edad'=> rand(0,20),
                 'animals_id' => 1,
             ));
         }
