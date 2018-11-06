@@ -16,9 +16,14 @@ Route::get('/', function () {
 });
 
 Route::get('/animales',function(){
-    $animales = DB::table('animals')->get();
-    $animal = DB::table('especies')->get();
-return $animales . $animal;
+    $ante = DB::table('antelopes')->get();
+    $du = DB::table('dugongs')->get();
+    $mares = DB::table('mares')->get();
+    $vicu = DB::table('vicunas')->get();
+    $fro = DB::table('frogs')->get();
+    $octp = DB::table('octopuses')->get();
+    
+return $ante . $du . $mares . $vicu . $fro . $octp;
 });
 
 
