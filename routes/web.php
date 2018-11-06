@@ -38,7 +38,7 @@ Route::get('animales/{$id}', function($id){
 })->middleware('grupo1');
 
 Route::get('Frog/{id}', function ($id) {
-    App\User::destroy($id);
+    App\frogs::destroy($id);
     return 'Frog'.$id.' deleted';
 });
 
