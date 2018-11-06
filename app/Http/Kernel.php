@@ -41,6 +41,21 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'bindings',
         ],
+
+        'grupo1' => [
+            'Edad',
+            'auth',
+        ],
+        'grupo2' => [
+            'Edad',
+            'auth',
+            'NuevoRegistro',
+        ],
+        'grupo3' => [
+            'Edad',
+            'auth',
+            'RegistroInsertar',
+        ],
     ];
 
     /**
@@ -51,6 +66,10 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
+        'Edad' => \App\Http\Middleware\Edad::class,
+        'Auth' => \App\Http\Middleware\Auth::class,
+        'NuevoRegistro' => \App\Http\Middleware\NuevoRegistro::class,
+        'RegistroInsertar' => \App\Http\Middleware\RegistroInsertar::class,
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,

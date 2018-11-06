@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Vicuna extends Model
 {
-    //
+    public function getAnimal(){
+        return $this->belogsTo(Animal::class);
+    }
 }
