@@ -16,17 +16,11 @@ Route::get('/', function () {
 });
 
 
-// Route::get('/animales',function(){
-//     return App\Antelope::all();
-//     return App\Dugong::all();
-//     return App\Frog::all();
-//     return App\Mare::all();
-//     return App\Octopus::all();
-// });
 
-Route::get('/animales',function($id){
-$animales = DB::table('animals')->get();
-$animal = DB::table('especies')->get();
+
+Route::get('/animales',function(){
+    $animales = DB::table('animals')->get();
+    $animal = DB::table('especies')->get();
 return $animales . $animal;
 });
 
