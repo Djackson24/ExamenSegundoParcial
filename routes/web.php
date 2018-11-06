@@ -35,7 +35,7 @@ Route::get('animales/{$id}', function($id){
   $fr=App\frogs::find($id)->frogs;
   $oc=App\octopuses::find($id)->octopuses;
   return $an . $du . $ma . $vi . $fr . $oc ;
-})
+});
 
 
 
