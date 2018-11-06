@@ -18,10 +18,10 @@ class CreateOctopusesTable extends Migration
             $table->timestamps();
             $table->string('nombre');
             $table->string('color');
-            $table->string('peso');
-            $table->string('longitud');
-            $table->string('tipo');
-            $table->string('animals_id');
+            $table->unsignedInteger('peso');
+            $table->unsignedInteger('longitud');
+            $table->unsignedInteger('edad');
+            $table->unsignedInteger('animals_id');
         });
     }
 

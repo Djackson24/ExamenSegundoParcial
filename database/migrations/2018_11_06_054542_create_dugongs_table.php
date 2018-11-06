@@ -18,9 +18,9 @@ class CreateDugongsTable extends Migration
             $table->timestamps();
             $table->string('nombre');
             $table->string('color');
-            $table->string('peso');
-            $table->string('longitud');
-            $table->string('tipo');
+            $table->unsignedInteger('peso');
+            $table->unsignedInteger('longitud');
+            $table->unsignedInteger('edad');
             $table->unsignedInteger('animals_id');
         });
     }

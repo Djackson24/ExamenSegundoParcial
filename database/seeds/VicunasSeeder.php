@@ -2,7 +2,9 @@
 
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
-class Antelope extends Seeder
+
+
+class VicunasSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,7 +15,7 @@ class Antelope extends Seeder
     {
         $faker = Faker::create();
         for($i=0;$i<50;$i++){
-            DB::table('antelopes')->insert(array(
+            DB::table('vicunas')->insert(array(
                 'nombre' => $faker->firstNameMale,
                 'color' => str_random(10),
                 'peso' => random_int(15,50),
