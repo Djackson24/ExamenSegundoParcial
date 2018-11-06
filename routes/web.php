@@ -28,12 +28,12 @@ return $ante . $du . $mares . $vicu . $fro . $octp;
 
 
 Route::get('animales/{$id}', function($id){
-  $an=App\antelopes::find($id)->antelopes;
-  $du=App\dugongs::find($id)->dugongs;
-  $ma=App\mares::find($id)->mares;
-  $vi=App\vicunas::find($id)->vicunas;
-  $fr=App\frogs::find($id)->frogs;
-  $oc=App\octopuses::find($id)->octopuses;
+  $an=App\antelopes::find($id)->get();
+  $du=App\dugongs::find($id)->get();
+  $ma=App\mares::find($id)->get();
+  $vi=App\vicunas::find($id)->get();
+  $fr=App\frogs::find($id)->get();
+  $oc=App\octopuses::find($id)->get();
   return $an . $du . $ma . $vi . $fr . $oc ;
 });
 
