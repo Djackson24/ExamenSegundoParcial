@@ -15,8 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/',function(){
-    return DB::table('animals')->union('antilope')->get();    
+
+Route::get('/animales',function(){
+    return App\Antelope::all();
+    return  App\Dugong::all();
+    return  App\Frog::all();
+    return  App\Mare::all();
+    return  App\Octopus::all();
 });
 
 
