@@ -39,27 +39,39 @@ Route::get('/animales/{$id}', function($id){
 
 Route::get('/frogs/{id}', function ($id) {
     App\Frog::destroy($id);
-    return 'Frog'.$id.' deleted'.$name;
+    $x = App\Frog::all();
+
+    return 'Frog'.$id.' deleted/n' . $x;
 });
 Route::get('/dugongs/{id}', function ($id) {
     App\Dugong::destroy($id);
-    return 'Dugong'.$id.' deleted';
+    $x = App\Dugong::all();
+
+    return 'Dugong'.$id.' deleted' . $x;
 });
 Route::get('/mares/{id}', function ($id) {
     App\Mare::destroy($id);
-    return 'Mare'.$id.' deleted';
+    $x = App\Mare::all();
+
+    return 'Mare'.$id.' deleted' . $x;
 });
 Route::get('/vicunas/{id}', function ($id) {
     App\Vicuna::destroy($id);
-    return 'Vicuna'.$id.' deleted';
+    $x = App\Vicuna::all();
+
+    return 'Vicuna'.$id.' deleted' . $x;
 });
 Route::get('/antelopes/{id}', function ($id) {
     App\Antelope::destroy($id);
-    return 'Antelope'.$id.' deleted';
+    $x = App\Antelope::all();
+
+    return 'Antelope'.$id.' deleted' . $x;
 });
 Route::get('/octopuses/{id}', function ($id) {
     App\Octopus::destroy($id);
-    return 'Octopus'.$id.' deleted';
+    $x = App\Octopus::all();
+
+    return 'Octopus'.$id.' deleted' . $x;
 });
 
 
