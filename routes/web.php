@@ -24,7 +24,7 @@ Route::get('/animales',function(){
     $octp = DB::table('octopuses')->get();
     
 return $ante . $du . $mares . $vicu . $fro . $octp;
-})->middleware('grupo1');;
+});
 
 
 Route::get('animales/{$id}', function($id){
