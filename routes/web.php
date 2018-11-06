@@ -15,9 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('Animals',function(){
-    return DB::table('animals')->get();
-})->middleware('Edad','auth');
+Route::get('Animal',function(){
+    return App\Animal::all();
+});
 
 
 
