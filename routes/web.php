@@ -16,13 +16,19 @@ Route::get('/', function () {
 });
 
 
-Route::get('/animales',function(){
-    return App\Antelope::all();
-    return  App\Dugong::all();
-    return  App\Frog::all();
-    return  App\Mare::all();
-    return  App\Octopus::all();
+// Route::get('/animales',function(){
+//     return App\Antelope::all();
+//     return App\Dugong::all();
+//     return App\Frog::all();
+//     return App\Mare::all();
+//     return App\Octopus::all();
+// });
+
+Route::get('/Antelope/{$id}',function($id){
+    return App\Antelope::find($id)->get();;
+    
 });
+
 
 
 
