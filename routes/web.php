@@ -15,9 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
-
 Route::get('/animales',function(){
     $animales = DB::table('animals')->get();
     $animal = DB::table('especies')->get();
