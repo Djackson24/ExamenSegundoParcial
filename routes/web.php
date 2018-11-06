@@ -39,7 +39,27 @@ Route::get('/animales/{$id}', function($id){
 
 Route::get('/frogs/{id}', function ($id) {
     App\Frog::destroy($id);
-    return 'Frog'.$id.' deleted';
+    return 'Frog'.$id.' deleted'.$name;
+});
+Route::get('/dugongs/{id}', function ($id) {
+    App\Dugong::destroy($id);
+    return 'Dugong'.$id.' deleted';
+});
+Route::get('/mares/{id}', function ($id) {
+    App\Mare::destroy($id);
+    return 'Mare'.$id.' deleted';
+});
+Route::get('/vicunas/{id}', function ($id) {
+    App\Vicuna::destroy($id);
+    return 'Vicuna'.$id.' deleted';
+});
+Route::get('/antelopes/{id}', function ($id) {
+    App\Antelope::destroy($id);
+    return 'Antelope'.$id.' deleted';
+});
+Route::get('/octopuses/{id}', function ($id) {
+    App\Octopus::destroy($id);
+    return 'Octopus'.$id.' deleted';
 });
 
 
