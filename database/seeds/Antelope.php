@@ -15,7 +15,7 @@ class Antelope extends Seeder
         for($i=0;$i<50;$i++){
             DB::table('antelopes')->insert(array(
                 'nombre' => $faker->firstNameMale,
-                'color' => $faker->str_ramdom(10),
+                'color' => $faker->str_random(10),
                 'peso' => random_int(15,50),
                 'longitud' => random_int(15,80),
                 'edad'=> random_init(0,20),
