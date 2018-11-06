@@ -24,9 +24,10 @@ Route::get('/', function () {
 //     return App\Octopus::all();
 // });
 
-Route::get('/Antelope/{$id}',function($id){
-    return App\Antelope::find($id)->get();;
-    
+Route::get('Antelope/{$id}',function($id){
+
+    $ante = App\Antelope::find($id);
+    return $ante;
 });
 
 
