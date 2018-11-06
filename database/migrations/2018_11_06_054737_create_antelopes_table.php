@@ -16,6 +16,12 @@ class CreateAntelopesTable extends Migration
         Schema::create('antelopes', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->string('nombre');
+            $table->string('color');
+            $table->unsignedInteger('peso');
+            $table->unsignedInteger('longitud');
+            $table->unsignedInteger('edad');
+            $table->unsignedInteger('animals_id');
         });
     }
 

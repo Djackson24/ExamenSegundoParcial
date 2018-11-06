@@ -16,6 +16,12 @@ class CreateDugongsTable extends Migration
         Schema::create('dugongs', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->string('nombre');
+            $table->string('color');
+            $table->string('peso');
+            $table->string('longitud');
+            $table->string('tipo');
+            $table->unsignedInteger('animals_id');
         });
     }
 
