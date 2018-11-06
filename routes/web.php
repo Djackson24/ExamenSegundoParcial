@@ -15,8 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('Animal',function(){
-    return App\Animal::all();
+Route::get('/',function(){
+    return DB::table('animals')->union('antilope')->get();    
 });
 
 
