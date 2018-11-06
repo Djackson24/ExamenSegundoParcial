@@ -25,7 +25,7 @@ Route::get('/', function () {
 // });
 
 Route::get('/animales',function($id){
-$animales = DB::table('animales')->get();
+$animales = DB::table('animals')->get();
 $animal = DB::table('especies')->get();
 return $animales . $animal;
 });
