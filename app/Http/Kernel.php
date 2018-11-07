@@ -31,7 +31,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
-            // \Illuminate\Session\Middleware\AuthenticateSession::class,
+            //\Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
@@ -43,18 +43,18 @@ class Kernel extends HttpKernel
         ],
 
         'grupo1' => [
-            'Edad',
-            'auth',
+            'Edad' => \App\Http\Middleware\Edad::class,
+            'auth' => \App\Http\Middleware\Authenticate::class
         ],
         'grupo2' => [
-            'Edad',
-            'auth',
-            'NuevoRegistro',
+            'Edad' => \App\Http\Middleware\Edad::class,
+            'auth' => \App\Http\Middleware\Authenticate::class,
+            'NuevoRegistro' => \App\Http\Middleware\NuevoRegistro::class
         ],
         'grupo3' => [
-            'Edad',
-            'auth',
-            'RegistroInsertar',
+            'Edad'  => \App\Http\Middleware\Edad::class,
+            'auth' => \App\Http\Middleware\Authenticate::class,
+            'RegistroInsertar' => \App\Http\Middleware\RegistroInsertar::class
         ],
     ];
 
