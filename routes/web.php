@@ -91,8 +91,8 @@ Route::get('/octopuses/delete/{id}', function ($id) {
     return 'Octopus'.$id.' deleted' . $x;
 });
 
-Route::get('BusquedaMares/id/{$id}',function($id){
-    $us = App\mares::find($id);
+Route::get('/BusquedaMares/id/{$id}',function($id){
+    $us = App\Mares::find($id);
     return $us;
 });
 
