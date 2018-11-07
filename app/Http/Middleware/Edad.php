@@ -18,6 +18,7 @@ class Edad
         if ($request->age >= 18 && $request->age <=60) {
             return $next($request);
         }
+        return redirect('home');
     
     }
 }
