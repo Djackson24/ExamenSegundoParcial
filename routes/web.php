@@ -31,7 +31,7 @@ return $ante . $du . $mares . $vicu . $fro . $octp;
 });
 
 
-Route::get('/animales/{$id}', function($id){
+Route::get('/animales/id/{$id}', function($id){
   $an=App\Antelope::find($id)->get($id);
   $du=App\Dugong::find($id)->get($id);
   $ma=App\Mare::find($id)->get($id);
