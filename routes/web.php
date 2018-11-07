@@ -1,7 +1,7 @@
 <?php
 
-use App\Mares;
-
+use App\Mare;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
