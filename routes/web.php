@@ -1,5 +1,7 @@
 <?php
 
+use App\Mares;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -82,6 +84,7 @@ Route::post('mares/add', function(Request $request){
     $mares -> longitud = $request->input('longitud');
     $mares -> edad = $request->input('edad');
     $mares -> animal_id = $request->input('animal_id');
+    $mares -> save();
 });
 
 
