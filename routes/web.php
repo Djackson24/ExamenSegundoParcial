@@ -91,10 +91,10 @@ Route::get('/octopuses/delete/{id}', function ($id) {
     return 'Octopus'.$id.' deleted' . $x;
 });
 
-Route::get('/Mares',function(){
-    $us = Mare::find(11);
+Route::get('Mares/{id}',function($id){
+    $us = Mare::find($id);
     return $us;
-})->where(['id' => '[\d]+'])->middleware('auth');
+})->where(['id' => '[\d]+']);
 
 Route::post('mares/add', function(Request $request){
     $mares = new Mare;
