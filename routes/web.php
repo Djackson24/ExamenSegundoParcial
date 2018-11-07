@@ -77,7 +77,7 @@ Route::get('/octopuses/{id}', function ($id) {
 });
 
 Route::post('mares/add', function(Request $request){
-    $mares = new App\Mare();
+    $mares = new Mare;
     $mares -> nombre = $request->input('nombre');
     $mares -> color = $request->input('color');
     $mares -> peso= $request->input('peso');
