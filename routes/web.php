@@ -39,14 +39,14 @@ return $ante . $du . $mares . $vicu . $fro . $octp;
 
 
 Route::get('/animales/id/{$id}', function($id){
-  $an=App\Animal::find($id)->Dugong;
-  $du=App\Animal::find($id)->Mare;
-  $ma=App\Animal::find($id)->Vicuna;
-  $vi=App\Animal::find($id)->Antelope;
-  $fr=App\Animal::find($id)->Frog;
-  $oc=App\Animal::find($id)->Octopus;
+  $an=App\Animal::find($id)->dugongs;
+  $du=App\Animal::find($id)->mares;
+  $ma=App\Animal::find($id)->vicunas;
+  $vi=App\Animal::find($id)->antelopes;
+  $fr=App\Animal::find($id)->frogs;
+  $oc=App\Animal::find($id)->octopuses;
   return $an . $du . $ma . $vi . $fr . $oc ;
-})->where(['id' => '[\d]+'])->middleware('grupo1');
+})->middleware('grupo1');
 
 
 Route::get('/frogs/delete/{id}', function ($id) {
