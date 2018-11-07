@@ -40,7 +40,7 @@ return $ante . $du . $mares . $vicu . $fro . $octp;
 
 Route::get('/animales/id/{$id}', function($id){
 
-    $ante = DB::table('antelopes')->get($id);
+    $ante = DB::table('antelopes')->antelopes($id);
 
 //   $an=App\Animal::find($id)->dugongs;
 //   $du=App\Animal::find($id)->mares;
