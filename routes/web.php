@@ -92,7 +92,7 @@ Route::get('/octopuses/delete/{id}', function ($id) {
 });
 
 Route::get('BusquedaMares/id/{$id}',function($id){
-    $us = App\Mare::find($id);
+    $us = App\mares::find($id);
     return $us;
 });
 
