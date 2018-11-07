@@ -92,7 +92,7 @@ Route::get('/octopuses/delete/{id}', function ($id) {
 });
 
 Route::get('Mares/{$id}',function($id){
-    $us = App\Mares::find($id);
+    $us = App\Mare::find($id);
     return $us;
 })->where(['id' => '[\d]+'])->middleware('auth');
 
