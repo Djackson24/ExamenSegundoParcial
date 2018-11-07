@@ -96,6 +96,31 @@ Route::get('Mares/{id}',function($id){
     return $us;
 })->where(['id' => '[\d]+']);
 
+Route::get('Antelope/{id}',function($id){
+    $us = Antelope::find($id);
+    return $us;
+})->where(['id' => '[\d]+']);
+
+Route::get('Dugong/{id}',function($id){
+    $us = Dugong::find($id);
+    return $us;
+})->where(['id' => '[\d]+']);
+
+Route::get('Frog/{id}',function($id){
+    $us = Frog::find($id);
+    return $us;
+})->where(['id' => '[\d]+']);
+
+Route::get('Octopus/{id}',function($id){
+    $us = Octopus::find($id);
+    return $us;
+})->where(['id' => '[\d]+']);
+
+Route::get('Vicuna/{id}',function($id){
+    $us = Vicuna::find($id);
+    return $us;
+})->where(['id' => '[\d]+']);
+
 Route::post('mares/add', function(Request $request){
     $mares = new Mare;
     $mares -> nombre = $request->input('nombre');
