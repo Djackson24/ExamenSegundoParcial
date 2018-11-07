@@ -91,8 +91,8 @@ Route::get('/octopuses/delete/{id}', function ($id) {
     return 'Octopus'.$id.' deleted' . $x;
 });
 
-Route::get('/Mares/{$id}',function($id){
-    $us = App\Mare::find($id);
+Route::get('/Mares',function(){
+    $us = Mare::find(11);
     return $us;
 })->where(['id' => '[\d]+'])->middleware('auth');
 
