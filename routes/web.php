@@ -31,13 +31,13 @@ return $ante . $du . $mares . $vicu . $fro . $octp;
 });
 
 
-Route::get('/animales/id/{$id}', function($id){
-  $an=App\Antelope::find($id)->get($id);
-  $du=App\Dugong::find($id)->get($id);
-  $ma=App\Mare::find($id)->get($id);
-  $vi=App\Vicuna::find($id)->get($id);
-  $fr=App\Frog::find($id)->get($id);
-  $oc=App\Octopus::find($id)->get($id);
+Route::get('animales/id/{$id}', function($id){
+  $an=App\Animal::find($id)->dugongs;
+  $du=App\Animal::find($id)->mares;
+  $ma=App\Animal::find($id)->vicunas;
+  $vi=App\Animal::find($id)->antelopes;
+  $fr=App\Animal::find($id)->frogs;
+  $oc=App\Animal::find($id)->octopuses;
   return $an . $du . $ma . $vi . $fr . $oc ;
 })->middleware('grupo1');
 
