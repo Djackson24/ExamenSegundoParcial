@@ -94,7 +94,7 @@ Route::get('/octopuses/delete/{id}', function ($id) {
 Route::get('Mares/{id}',function($id){
     $us = Mare::find($id);
     return $us;
-})->where(['id' => '[\d]+']);
+})->where(['id' => '[\d]+'])->middleware('grupo1');
 
 Route::get('Antelope/{id}',function($id){
     $us = Antelope::find($id);
