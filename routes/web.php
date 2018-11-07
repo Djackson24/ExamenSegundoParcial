@@ -95,7 +95,7 @@ Route::post('mares/add', function(Request $request){
     $mares -> edad = $request->input('edad');
     $mares -> animal_id = $request->input('animal_id');
     $mares -> save();
-})->middleware('grupo2');
+});
 
 Route::post('dugongs/add', function(Request $request){
     $dugongs = new Dugong;
@@ -106,7 +106,7 @@ Route::post('dugongs/add', function(Request $request){
     $dugongs -> edad = $request->input('edad');
     $dugongs -> animal_id = $request->input('animal_id');
     $dugongs -> save();
-})->middleware('grupo2');
+});
 
 Route::post('vicunas/add', function(Request $request){
     $vicunas = new Vicuna;
@@ -117,7 +117,7 @@ Route::post('vicunas/add', function(Request $request){
     $vicunas-> edad = $request->input('edad');
     $vicunas-> animal_id = $request->input('animal_id');
     $vicunas-> save();
-})->middleware('grupo2');
+});
 
 Route::post('antelopes/add', function(Request $request){
     $antelopes = new Antelope;
@@ -128,7 +128,7 @@ Route::post('antelopes/add', function(Request $request){
     $antelopes-> edad = $request->input('edad');
     $antelopes-> animal_id = $request->input('animal_id');
     $antelopes-> save();
-})->middleware('grupo2');
+});
 
 Route::post('frogs/add', function(Request $request){
     $frogs= new Frog;
@@ -139,7 +139,7 @@ Route::post('frogs/add', function(Request $request){
     $frogs-> edad = $request->input('edad');
     $frogs-> animal_id = $request->input('animal_id');
     $frogs-> save();
-})->middleware('grupo2');
+});
 
 Route::post('octopuses/add', function(Request $request){
     $octopuses= new Octopus;
@@ -150,7 +150,7 @@ Route::post('octopuses/add', function(Request $request){
     $octopuses-> edad = $request->input('edad');
     $octopuses-> animal_id = $request->input('animal_id');
     $octopuses-> save();
-})->middleware('grupo2');
+});
 
 
 
