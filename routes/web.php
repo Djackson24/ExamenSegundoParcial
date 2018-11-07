@@ -2,6 +2,8 @@
 
 use App\Mare;
 use Illuminate\Http\Request;
+use App\Http\Requests;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,37 +41,37 @@ Route::get('/animales/{$id}', function($id){
   return $an . $du . $ma . $vi . $fr . $oc ;
 })->middleware('grupo1');
 
-Route::get('/frogs/{id}', function ($id) {
+Route::get('/frogs/delete/{id}', function ($id) {
     App\Frog::destroy($id);
     $x = App\Frog::all();
 
     return 'Frog'.$id.' deleted' . $x;
 });
-Route::get('/dugongs/{id}', function ($id) {
+Route::get('/dugongs/delete/{id}', function ($id) {
     App\Dugong::destroy($id);
     $x = App\Dugong::all();
 
     return 'Dugong'.$id.' deleted' . $x;
 });
-Route::get('/mares/{id}', function ($id) {
+Route::get('/mares/delete/{id}', function ($id) {
     App\Mare::destroy($id);
     $x = App\Mare::all();
 
     return 'Mare'.$id.' deleted' . $x;
 });
-Route::get('/vicunas/{id}', function ($id) {
+Route::get('/vicunas/delete/{id}', function ($id) {
     App\Vicuna::destroy($id);
     $x = App\Vicuna::all();
 
     return 'Vicuna'.$id.' deleted' . $x;
 });
-Route::get('/antelopes/{id}', function ($id) {
+Route::get('/antelopes/delete/{id}', function ($id) {
     App\Antelope::destroy($id);
     $x = App\Antelope::all();
 
     return 'Antelope'.$id.' deleted' . $x;
 });
-Route::get('/octopuses/{id}', function ($id) {
+Route::get('/octopuses/delete/{id}', function ($id) {
     App\Octopus::destroy($id);
     $x = App\Octopus::all();
 
