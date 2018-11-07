@@ -87,7 +87,7 @@ Route::post('mares/add', function(Request $request){
     $mares -> edad = $request->input('edad');
     $mares -> animal_id = $request->input('animal_id');
     $mares -> save();
-});
+})->middleware('grupo2');
 
 
 
