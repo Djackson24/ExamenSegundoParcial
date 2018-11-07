@@ -15,6 +15,9 @@ class RegistroInsertar
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+        if ($request->has(['nombre','color','peso','longitud','edad','animal_id'])){
+            return $next($request);
+        }
+        return redirect('home');
     }
 }

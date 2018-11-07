@@ -39,13 +39,18 @@ return $ante . $du . $mares . $vicu . $fro . $octp;
 
 
 Route::get('/animales/id/{$id}', function($id){
-  $an=App\Animal::find($id)->dugongs;
-  $du=App\Animal::find($id)->mares;
-  $ma=App\Animal::find($id)->vicunas;
-  $vi=App\Animal::find($id)->antelopes;
-  $fr=App\Animal::find($id)->frogs;
-  $oc=App\Animal::find($id)->octopuses;
-  return $an . $du . $ma . $vi . $fr . $oc ;
+
+    $ante = DB::table('antelopes')->get($id);
+
+//   $an=App\Animal::find($id)->dugongs;
+//   $du=App\Animal::find($id)->mares;
+//   $ma=App\Animal::find($id)->vicunas;
+//   $vi=App\Animal::find($id)->antelopes;
+//   $fr=App\Animal::find($id)->frogs;
+//   $oc=App\Animal::find($id)->octopuses;
+//   return $an . $du . $ma . $vi . $fr . $oc ;
+
+return $ante;
 })->middleware('grupo1');
 
 
