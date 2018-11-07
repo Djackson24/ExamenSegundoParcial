@@ -19,6 +19,6 @@ class Edad
             return $next($request);
         }
         return redirect('home');
-    
+
     }
 }
