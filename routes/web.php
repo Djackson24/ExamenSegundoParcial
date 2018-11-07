@@ -1,6 +1,13 @@
 <?php
 
+
 use App\Mare;
+use App\Antelope;
+use App\Dugong;
+use App\Frog;
+use App\Octopus;
+use App\Vicuna;
+
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
@@ -39,7 +46,8 @@ Route::get('animals/id/{$id}', function($id){
   $fr=App\Animal::find($id)->Frog;
   $oc=App\Animal::find($id)->Octopus;
   return $an . $du . $ma . $vi . $fr . $oc ;
-})->middleware('grupo1');
+})->where(['id' => '[\d]+'])->middleware('grupo1');
+
 
 Route::get('/frogs/delete/{id}', function ($id) {
     App\Frog::destroy($id);
