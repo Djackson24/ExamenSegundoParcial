@@ -91,6 +91,11 @@ Route::get('/octopuses/delete/{id}', function ($id) {
     return 'Octopus'.$id.' deleted' . $x;
 });
 
+Route::get('BusquedaMares/id/{$id}',function($id){
+    $us = App\Mare::find($id);
+    return $us;
+});
+
 Route::post('mares/add', function(Request $request){
     $mares = new Mare;
     $mares -> nombre = $request->input('nombre');
