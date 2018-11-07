@@ -37,23 +37,6 @@ Route::get('/animales',function(){
 return $ante . $du . $mares . $vicu . $fro . $octp;
 });
 
-
-Route::get('/animales/id/{$id}', function($id){
-
-    $ante = DB::table('antelopes')->antelopes($id);
-
-//   $an=App\Animal::find($id)->dugongs;
-//   $du=App\Animal::find($id)->mares;
-//   $ma=App\Animal::find($id)->vicunas;
-//   $vi=App\Animal::find($id)->antelopes;
-//   $fr=App\Animal::find($id)->frogs;
-//   $oc=App\Animal::find($id)->octopuses;
-//   return $an . $du . $ma . $vi . $fr . $oc ;
-
-return $ante;
-})->middleware('grupo1');
-
-
 Route::get('/frogs/delete/{id}', function ($id) {
     App\Frog::destroy($id);
     $x = App\Frog::all();
